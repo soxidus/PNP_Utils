@@ -1,8 +1,133 @@
 <html>
   <head>
-    <title>Hellooo</title>
+    <title>NPC Generator</title>
 
   </head>
   <body>
+    <div id="myDiv"></div>
+    <br>
+    <select id="selectNumber" onchange="">
+      <option>Points to Spend</option>
+    </select>
+    <br><br>
+    <div>
+      <table id="skill_table" border="1">
+        <tr>
+          <th>Handeln</th>
+          <th>Wissen</th>
+          <th>Soziales</th>
+        </tr>
+      <tr>
+        <td id=""><input type="checkbox" > Nahkampf <input type="number" ></td>
+        <td id=""><input type="checkbox"> Magie <input type="number" ></td>
+        <td id=""><input type="checkbox"> Lügen <input type="number" ></td>
+      </tr>
+
+      </tr>
+        <td id=""><input type="checkbox"> Fernkampf <input type="number" ></td>
+        <td id=""><input type="checkbox"> Geschichte und Mythen <input type="number" ></td>
+        <td id=""><input type="checkbox"> Überzeugen <input type="number" ></td>
+      </tr>
+
+      <tr>
+        <td id=""><input type="checkbox"> Einhand Waffen <input type="number" ></td>
+        <td id=""><input type="checkbox"> Tierkunde <input type="number" ></td>
+        <td id=""><input type="checkbox"> Verhandeln <input type="number" ></td>
+      </tr>
+
+      <tr>
+        <td id=""><input type="checkbox"> Zweihand Waffen <input type="number" ></td>
+        <td id=""><input type="checkbox"> Pflanzenkunde <input type="number" ></td>
+        <td id=""><input type="checkbox"> Einschüchtern <input type="number" ></td>
+      </tr>
+
+      <tr>
+        <td id=""><input type="checkbox"> Hiebwaffen <input type="number" ></td>
+        <td id=""><input type="checkbox"> Gesteinskunde <input type="number" ></td>
+        <td id=""><input type="checkbox"> Menschenkenntnis <input type="number" ></td>
+      </tr>
+
+      <tr>
+        <td id=""><input type="checkbox"> Agilität (Springen Klettern und Co.) <input type="number" ></td>
+        <td id=""><input type="checkbox"> Geographie <input type="number" ></td>
+        <td id=""><input type="checkbox"> Betören <input type="number" ></td>
+      </tr>
+
+      <tr>
+        <td id=""><input type="checkbox"> Schlossknacken <input type="number" ></td>
+        <td id=""><input type="checkbox"> Medizin <input type="number" ></td>
+        <td id=""><input type="checkbox"> Beruhigen <input type="number" ></td>
+      </tr>
+
+      <tr>
+        <td id=""><input type="checkbox"> Taschendiebstahl <input type="number" ></td>
+        <td id=""><input type="checkbox"> Kochen <input type="number" ></td>
+        <td id=""><input type="checkbox"> Redegewandtheit <input type="number" ></td>
+      </tr>
+
+      <tr>
+        <td id=""><input type="checkbox"> Verstecken <input type="number" ></td>
+        <td id=""><input type="checkbox"> Alchemie <input type="number" ></td>
+        <td id=""><input type="checkbox"> Humor <input type="number" ></td>
+      </tr>
+
+        <tr>
+        <td id=""><input type="checkbox"> Schleichen <input type="number" ></td>
+        <td id=""><input type="checkbox"> Fremdsprachen <input type="number" ></td>
+        <td id=""><input type="checkbox"> Zechen <input type="number" ></td>
+      </tr>
+
+      <tr>
+        <td id=""><input type="checkbox"> Erste Hilfe (Benötigt Mats) <input type="number" ></td>
+        <td id=""><input type="checkbox"> Gesellschaft / Allgemeinwissen <input type="number" ></td>
+        <td id=""><input type="checkbox"> Begeistern <input type="number" ></td>
+      </tr>
+
+      <tr>
+        <td id=""><input type="checkbox"> Angeln <input type="number" ></td>
+        <td id=""><input type="checkbox"> Lesen / Schreiben <input type="number" ></td>
+        <td id=""><input type="checkbox"> Ablenken <input type="number" ></td>
+      </tr>
+
+      <tr>
+        <td id=""><input type="checkbox"> Tanzen <input type="number" ></td>
+        <td id=""><input type="checkbox"> Wahrnehmung <input type="number" ></td>
+        <td id=""><input type="checkbox"> Manipulation <input type="number" ></td>
+      </tr>
+
+      <tr>
+        <td id=""><input type="checkbox"> Reiten <input type="number" ></td>
+      </tr>
+
+      <tr>
+        <td id=""><input type="checkbox"> Kraft <input type="number" ></td>
+      </tr>
+
+      </table>
+      <br>
+      <button>Generate NPC</button>
+    </div>
+
+    <script type="text/javascript">
+
+      var select = document.getElementById("selectNumber");
+      var options = ["50", "100", "150", "200", "250", "300", "400", "500", "600"];
+      for(var i = 0; i < options.length; i++) {
+          var opt = options[i];
+          var el = document.createElement("option");
+          el.textContent = opt;
+          el.value = opt;
+          select.appendChild(el);
+      }
+      var select = document.getElementById("Handeln");
+      var options = ["Nahkampf", "Fernkampf", "Einhand Waffen", "Zweihand Waffen", "Hiebwaffen", "Agilität (Springen Klettern und Co.)", "Schlossknacken", "Taschendiebstahl", "Verstecken", "Schleichen", "Erste Hilfe (Benötigt Mats)", "Angeln", "Tanzen", "Reiten", "Kraft"];
+      for(var i = 0; i < options.length; i++) {
+          var opt = options[i];
+          var el = document.createElement("option");
+          el.textContent = opt;
+          el.value = opt;
+          select.appendChild(el);
+      }
+      </script>
   </body>
 </html>
