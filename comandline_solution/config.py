@@ -1,19 +1,19 @@
 # Set global params here
 Handeln = [
-    "Nahkampf"
-    "Fernkampf"
-    "Einhand Waffen"
-    "Zweihand Waffen"
-    "Hiebwaffen"
-    "Agilität (Springen Klettern und Co.)"
-    "Schlossknacken"
-    "Taschendiebstahl"
-    "Verstecken"
-    "Schleichen"
-    "Erste Hilfe (Benötigt Mats)"
-    "Angeln"
-    "Tanzen"
-    "Reiten"
+    "Nahkampf",
+    "Fernkampf",
+    "Einhand Waffen",
+    "Zweihand Waffen",
+    "Hiebwaffen",
+    "Agilität (Springen Klettern und Co.)",
+    "Schlossknacken",
+    "Taschendiebstahl",
+    "Verstecken",
+    "Schleichen",
+    "Erste Hilfe (Benötigt Mats)",
+    "Angeln",
+    "Tanzen",
+    "Reiten",
     "Kraft"
     ]
 Wissen = [
