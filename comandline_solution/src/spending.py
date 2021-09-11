@@ -1,9 +1,9 @@
 import math
 import random
-from config import Handeln, Wissen, Soziales
 from visualization import match_val_to_text
 
-def spend_all_points_evenly(total):
+
+def spend_all_points_evenly(total, Handeln, Wissen, Soziales):
     sum_fields = len(Handeln)
     sum_fields += len(Wissen)
     sum_fields += len(Soziales)
@@ -19,19 +19,20 @@ def spend_all_points_evenly(total):
     for i in Soziales:
         print(match_val_to_text(i, points_per_field))
 
+
 def randomize_points_with_range(remaining):
     if remaining < 100:
-        rand_points = random.randint(0,remaining)
+        rand_points = random.randint(0, remaining)
     else:
-        rand_points = random.randint(0,100)
-    
+        rand_points = random.randint(0, 100)
+
     return rand_points
 
 
 def spend_bonus(total, a, b, c):
     bonus = total - a - b - c
-    selector = random.randint(1,3)
-    
+    selector = random.randint(1, 3)
+
     if selector == 1:
         return a + bonus, b, c
     if selector == 2:
@@ -41,17 +42,18 @@ def spend_bonus(total, a, b, c):
     else:
         return a, b, c
 
-def spend_all_points_random(total):
+
+def spend_all_points_random(total, Handeln, Wissen, Soziales):
 
     sum_fields = len(Handeln)
     sum_fields += len(Wissen)
     sum_fields += len(Soziales)
-    
-    remaining_h = math.floor(total /3)
-    remaining_w = math.floor(total /3)
-    remaining_s = math.floor(total /3)
 
-    remaining_h,remaining_w,remaining_s = spend_bonus(total, remaining_h, remaining_w, remaining_s)
+    remaining_h = math.floor(total / 3)
+    remaining_w = math.floor(total / 3)
+    remaining_s = math.floor(total / 3)
+
+    remaining_h, remaining_w, remaining_s = spend_bonus(total, remaining_h, remaining_w, remaining_s)
 
     print()
     print("Handeln:")

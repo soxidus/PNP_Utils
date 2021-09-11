@@ -1,5 +1,8 @@
+from random import choice
 from config import Handeln, Wissen, Soziales
 from spending import *
+from proceeding import *
+import inquirer
 
 
 def main():
@@ -8,19 +11,22 @@ def main():
     except ValueError:
         print("Error!! Got NaN instead of INT")
         exit
-    try:
-        dist = int(input("Select distibution \
-            1 for Uniform \
-            2 for Random \
-            ") or "1")
-    except ValueError:
-        print("Error!! Got NaN instead of INT")
-        exit
 
-    if dist == 1:
-        spend_all_points_evenly(total_in)
-    if dist == 2:
-        spend_all_points_random(total_in)
+    all_q = [
+        inquirer.List('choices',
+                      message="All Values or Choose some",
+                      choices=['all', 'choose'],
+                      ),
+    ]
+
+    all = inquirer.prompt(all_q)
+
+    if all['choices'] == 'all':
+        proceed_all(total_in)
+
+    if all['choices'] == 'choose':
+        proceed_selector(total_in)
+
 
 if __name__ == '__main__':
     main()
