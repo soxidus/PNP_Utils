@@ -7,12 +7,9 @@ Ruleset is based on [HTBAH](https://howtobeahero.de)
 
 # Tech
 
-running the app:
+It's a CLI Tool now:
+Install required Packages: 
+`pip install -r requirements.txt`
 
-WIN 
-
-`python -m flask run`
-
-Linux/MacOS
-
-`flask run`
+Run the Tool: 
+`python src/main.py`
