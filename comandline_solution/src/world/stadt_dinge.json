@@ -1,0 +1,12 @@
+{
+    "buildings": [
+        "Verwaltung",
+        "Haus",
+        "Stadtmauer"
+    ],
+    "special_buildings": [
+        "Tempel",
+        "Badehaus",
+        "Magischer Shop"
+    ]
+}
