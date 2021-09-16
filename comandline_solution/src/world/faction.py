@@ -1,19 +1,30 @@
 import yaml
+from typing import Sized
+from world.cities import City, village
+from world.buildings import Building, SpecialBuilding, Fortification
 
 
-class Faction: 
-    
-    def __init__(self, name="Dummy Faction", race="Human", cityCount=3, playerRelation=1.0) -> None:
+class Faction:
+    def __init__(self, name="Dummy Faction", race="Human", maxCities=3, playerRelation=1.0, wealth=10) -> None:
         self.name = name
         self.race = race
-        self.cityCount = cityCount
+        # self.cityCount = 0 # Done via Length of city array
+        self.maxCities = maxCities
         self.playerRelation = 1.0
+        self.wealth = wealth
+        self.cities = []
+        self.relations = {}
         # self.buildings = [data.haus]
 
-    def fillCity(self, wealth)
+    def foundCity(self, freebie, city=City()):
+        if freebie:
+            if len(self.cities <= self.size):
+                self.buildings.append(city) 
+
+    def destroyCity(self):
         pass
 
-
-def info(self):
-    # print(self.__dict__)
-    print(yaml.dump(self.__dict__, default_flow_style=False, sort_keys=False))
+    def info(self):
+        # print(self.__dict__)
+        print("Factionsinfo: ")
+        print(yaml.dump(self.__dict__, default_flow_style=False, sort_keys=False))

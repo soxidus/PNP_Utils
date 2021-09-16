@@ -1,9 +1,11 @@
+
 from yaml import load
-from world.world import World
+import world.world
+#import world.faction
 import jsonpickle
 
 print("Test Bed for Faction and Worldmanagement")
-
+print()
 
 def save_game(filename, world):
     with open(filename, 'w') as savegame:
@@ -16,7 +18,16 @@ def load_game(filename):
     return world
 
 
-# welt = World("Glynnmouth")
-welt = load_game("test.save")
+welt = World("Glynnmouth")
+testfaction = Faction("Huberts Bande")
+testfaction.info()
+print()
+print()
+welt.createFaction(testfaction)
+#welt = load_game("test.save")
 welt.info()
+print()
 #save_game("test.save", welt)
+#testfaction.foundCity
+
+
