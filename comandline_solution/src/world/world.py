@@ -2,6 +2,8 @@
 
 from typing import Sized
 import yaml
+import json
+from types import SimpleNamespace
 
 
 class World:
@@ -9,9 +11,9 @@ class World:
         self.name = name
         self.size = size
         self.factioncount = count
+        self.faction = {} 
 
 
     def info(self):
         # print(self.__dict__)
         print(yaml.dump(self.__dict__, default_flow_style=False, sort_keys=False))
-

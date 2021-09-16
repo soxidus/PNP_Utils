@@ -1,6 +1,7 @@
 {
     "name": "Vereinten Königreiche",
     "capital": "London",
+    "race": "Menschen",
     "found": 2016,
     "active": true,
     "cities":[
