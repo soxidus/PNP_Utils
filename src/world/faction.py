@@ -1,7 +1,7 @@
 import yaml
 from typing import Sized
-from world.cities import City, village
-from world.buildings import Building, SpecialBuilding, Fortification
+from cities import City, village
+from buildings import Building, SpecialBuilding, Fortification
 
 
 class Faction:

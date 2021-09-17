@@ -1,6 +1,6 @@
-import world.faction
-import world.cities
-import world.buildings
+import faction
+import cities
+import buildings
 from typing import Sized
 import yaml
 
