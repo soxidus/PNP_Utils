@@ -1,6 +1,6 @@
-import faction
-import cities
-import buildings
+from faction import Faction
+from cities import City, Village
+from buildings import Building, SpecialBuilding, Fortification
 from typing import Sized
 import yaml
 

@@ -1,6 +1,8 @@
 
 from yaml import load
-import world.world
+from world import World
+from faction import Faction
+import buildings
 #import world.faction
 import jsonpickle
 

@@ -1,6 +1,6 @@
 import yaml
 from typing import Sized
-from cities import City, village
+from cities import City, Village
 from buildings import Building, SpecialBuilding, Fortification
 
 

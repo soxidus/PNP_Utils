@@ -1,4 +1,5 @@
-import world.buildings
+from buildings import Building, SpecialBuilding, Fortification
+import buildings
 import yaml
 from typing import Sized
 
@@ -43,6 +44,6 @@ class City:
         print(yaml.dump(self.__dict__, default_flow_style=False, sort_keys=False))
 
 
-class village(City):
+class Village(City):
     def __init__(self, name, size, type="village") -> None:
         pass
