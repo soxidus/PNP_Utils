@@ -18,8 +18,9 @@ class Faction:
 
     def foundCity(self, freebie, city=City()):
         if freebie:
-            if len(self.cities <= self.size):
-                self.buildings.append(city) 
+            if len(self.cities) <= self.maxCities:
+                self.cities.append(city) 
+
 
     def destroyCity(self):
         pass

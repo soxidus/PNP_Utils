@@ -1,5 +1,5 @@
 class Building:
-    def __init__(self, name, rarity=0, cost=1) -> None:
+    def __init__(self, name="Derp", rarity=0, cost=1) -> None:
         self.name = name
         self.rarity = rarity
         self.cost = cost

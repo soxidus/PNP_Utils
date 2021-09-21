@@ -9,9 +9,9 @@ class City:
     def __init__(self, **kwargs):
         self.__dict__ = dict(kwargs)
 
-    def __init__(self, name="Dummy Stadt", size=5, wealth=10, playerRelation=1.0) -> None:
+    def __init__(self, name="Dummy Stadt", maxSize=5, wealth=10, playerRelation=1.0) -> None:
         self.name = name
-        self.size = size
+        self.maxSize = maxSize
         self.wealth = wealth
         self.playerRelation = 1.0
         self.buildings = [buildings.haus]
@@ -24,12 +24,12 @@ class City:
     def fill(self):
         pass
 
-    def advance(self, building, freebie=False):
+    def advance(self, building=buildings.haus, freebie=False):
         if freebie:
-            if len(self.buildings <= self.size):
+            if len(self.buildings) <= self.maxSize:
                 self.buildings.append(building) 
         elif building.cost < self.wealth:
-            if len(self.buildings <= self.size):
+            if len(self.buildings) <= self.maxSize:
                 self.buildings.append(building) 
         else:
             return False
@@ -45,5 +45,5 @@ class City:
 
 
 class Village(City):
-    def __init__(self, name, size, type="village") -> None:
+    def __init__(self, name, maxSize, type="village") -> None:
         pass
