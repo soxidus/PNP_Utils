@@ -30,6 +30,7 @@ welt.createFaction(testfaction)
 welt.info()
 print()
 #save_game("test.save", welt)
-#testfaction.foundCity
-
+testfaction.foundCity
+#welt.info()
+testfaction.info
 
