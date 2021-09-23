@@ -1,0 +1,1 @@
+races = { "Human" : 10, "Centaur": 20, "Orc": 15, "Catperson": 10, "Elf": 10, } 

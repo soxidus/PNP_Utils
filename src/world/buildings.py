@@ -1,22 +1,25 @@
 class Building:
-    def __init__(self, name="Derp", rarity=0, cost=1) -> None:
+    def __init__(self, name="Derp", rarity=0, cost=1, desc ="Generic Buildiing") -> None:
         self.name = name
         self.rarity = rarity
         self.cost = cost
+        self.desc = desc
 
-        def info(self):
-            return f'{self.rarity} {self.name}, value {self.value}'
+    def info(self):
+            return f'{self.name} {self.rarity} {self.cost} {self.desc} '
     
 
 class SpecialBuilding(Building):
-    def __init__(self, name, rarity=2, cost=3) -> None:
+    def __init__(self, name, rarity=2, cost=3, desc ="Generic Special Buildiing") -> None:
         self.name = name
         self.rarity = rarity
         self.cost = cost
-
+        
+    def info(self):
+        return f'{self.name} {self.rarity} {self.cost} {self.desc} '
 
 class Fortification(Building):
-    def __init__(self, name, rarity=1, cost=2) -> None:
+    def __init__(self, name, rarity=1, cost=2, desc ="Generic Fortification") -> None:
         self.name = name
         self.rarity = rarity
         self.cost = cost
@@ -45,7 +48,8 @@ d_buildings = {
     "Schmiede": schmiede
 } 
 d_specialBuildings = { 
-
+    "magischer Shop": magicshop,
+    "Badehaus": badehaus 
 }
 
 d_fortifications = { 

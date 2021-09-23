@@ -11,11 +11,17 @@ def spend_all_points_evenly(total, Handeln, Wissen, Soziales):
     points_per_field = math.floor(total / sum_fields)
     bonus_points = total % sum_fields
 
-    print(points_per_field)
+    print("Points per field: " + str(points_per_field))
+    print()
+    print("Handeln:")
     for i in Handeln:
         print(match_val_to_text(i, points_per_field))
+    print()
+    print("Wissen:") 
     for i in Wissen:
         print(match_val_to_text(i, points_per_field))
+    print()
+    print("Soziales:")
     for i in Soziales:
         print(match_val_to_text(i, points_per_field))
 

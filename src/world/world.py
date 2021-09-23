@@ -1,4 +1,4 @@
-from faction import Faction
+from kingdom import Kingdom
 from cities import City, Village
 from buildings import Building, SpecialBuilding, Fortification
 from typing import Sized

@@ -1,7 +1,8 @@
 
 from yaml import load
 from world import World
-from faction import Faction
+from kingdom import Kingdom
+from buildings import Building
 import buildings
 #import world.faction
 import jsonpickle
@@ -24,23 +25,23 @@ welt = World("Glynnmouth")
 #welt.info()
 print()
 print()
-testfaction = Faction("Huberts Bande")
-#testfaction.info()
+testkingdom = Kingdom("Huberts Bande")
+#testkingdom.info()
 #print()
 #print()
-welt.createFaction(testfaction)
+welt.createFaction(testkingdom)
 #welt = load_game("test.save")
 #welt.info()
 print()
 print()
 #save_game("test.save", welt)
-testfaction.foundCity(True)
+testkingdom.foundCity(True)
 welt.info()
 print()
 print()
-testfaction.cities[0].advance(buildings.kltempel, True)
+testkingdom.cities[0].buildBuilding(buildings.kltempel, True)
 #welt.info()
-testfaction.info()
+testkingdom.info()
 print()
 print()
 welt.info()

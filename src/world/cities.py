@@ -19,23 +19,25 @@ class City:
     def info(self):
         # print(self.__dict__)
         print(yaml.dump(self.__dict__, default_flow_style=False, sort_keys=False))
-        # Todo create randomized city based on wealth, max building count
 
-    def fill(self):
-        pass
 
-    def advance(self, building=buildings.haus, freebie=False):
+    def fill(self,exhaustWealth=False):         # Todo create randomized city based on wealth, max building count
+        if exhaustWealth:
+            while self.wealth >0 and len(self.buildings) <= self.maxSize:
+                self.buildBuilding()
+
+    def buildBuilding(self, building=buildings.haus, freebie=False):
         if freebie:
             if len(self.buildings) <= self.maxSize:
                 self.buildings.append(building) 
-        elif building.cost < self.wealth:
+        elif building.cost <= self.wealth:
             if len(self.buildings) <= self.maxSize:
-                self.buildings.append(building) 
+                self.buildings.append(building)
+                self.wealth =- building.cost
         else:
             return False
 
-
-    def degrade(self, building):
+    def destroyBuilding(self, building):
         pass
 
     def info(self):
