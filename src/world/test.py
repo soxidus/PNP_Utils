@@ -8,6 +8,8 @@ import buildings
 import jsonpickle
 
 #todo test
+# toDo
+#todo #1 test to function
 
 print("Test Bed for Faction and Worldmanagement")
 print()
