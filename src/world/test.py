@@ -7,6 +7,8 @@ import buildings
 #import world.faction
 import jsonpickle
 
+#todo test
+
 print("Test Bed for Faction and Worldmanagement")
 print()
 
