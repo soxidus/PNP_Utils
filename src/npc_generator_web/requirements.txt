@@ -1,0 +1,5 @@
+flask
+requests
+dash
+flask_table
+pandas

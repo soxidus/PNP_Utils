@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="css/sliders.css">
+    <title>NPC Generator</title>
+  </head>
+  <body>
+
+    <br>
+
+    <select id="selectNumber" onchange="change_value(0);">
+      <option>Points to Spend</option>
+    </select>
+    <br><br>
+
+    <div class="slidecontainer">
+      <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+      <p>Value: <span id="slider_out"></span></p>
+    </div>
+    <script type="text/javascript">
+
+      function change_value(total_checked){
+        
+      }
+
+      </script>
+    <script>
+      var slider = document.getElementById("myRange");
+      var output = document.getElementById("slider_out");
+
+      output.innerHTML = slider.value;
+
+      slider.oninput = function() {
+        if (document.getElementById("selectNumber").value != "Points to Spend") {
+          var total_points = document.getElementById("selectNumber").value;
+        }
+        else {
+          var total_points = 100
+        }
+        
+        output.innerHTML = Math.floor(total_points * this.value / 100);
+      }
+    </script>
+
+    <script type="text/javascript">
+
+      var select = document.getElementById("selectNumber");
+      var options = ["50", "100", "150", "200", "250", "300", "400", "500", "600"];
+      for(var i = 0; i < options.length; i++) {
+          var opt = options[i];
+          var el = document.createElement("option");
+          el.textContent = opt;
+          el.value = opt;
+          select.appendChild(el);
+    }
+
+  </script>
+
+  </body>
+</html>

@@ -1,0 +1,165 @@
+<html>
+  <head>
+    <title>NPC Generator</title>
+
+  </head>
+  <body>
+    <div id="myDiv"></div>
+    <br>
+    <select id="selectNumber" onchange="change_value(0);">
+      <option>Points to Spend</option>
+    </select>
+    <br><br>
+    <div>
+      <table id="skill_table" border="1">
+        <tr>
+          <th>Handeln</th>
+          <th>Wissen</th>
+          <th>Soziales</th>
+        </tr>
+      <tr>
+        <td id="H1"><input type="checkbox" > Nahkampf <input type="number" id="HC1"></td>
+        <td id="W1"><input type="checkbox"> Magie <input type="number" id="WC1"></td>
+        <td id="S1"><input type="checkbox"> Lügen <input type="number" id="SC1"></td>
+      </tr>
+
+      </tr>
+        <td id="H2"><input type="checkbox"> Fernkampf <input type="number" id="HC2"></td>
+        <td id="W2"><input type="checkbox"> Geschichte und Mythen <input type="number" id="WC2"></td>
+        <td id="S2"><input type="checkbox"> Überzeugen <input type="number" id="SC2"></td>
+      </tr>
+
+      <tr>
+        <td id="H3"><input type="checkbox"> Einhand Waffen <input type="number" id="HC3"></td>
+        <td id="W3"><input type="checkbox"> Tierkunde <input type="number" id="WC3"></td>
+        <td id="S3"><input type="checkbox"> Verhandeln <input type="number" id="SC3"></td>
+      </tr>
+
+      <tr>
+        <td id="H4"><input type="checkbox"> Zweihand Waffen <input type="number" id="HC4"></td>
+        <td id="W4"><input type="checkbox"> Pflanzenkunde <input type="number" id="WC4"></td>
+        <td id="S4"><input type="checkbox"> Einschüchtern <input type="number" id="SC4"></td>
+      </tr>
+
+      <tr>
+        <td id="H5"><input type="checkbox"> Hiebwaffen <input type="number" id="HC5"></td>
+        <td id="W5"><input type="checkbox"> Gesteinskunde <input type="number" id="WC5"></td>
+        <td id="S5"><input type="checkbox"> Menschenkenntnis <input type="number" id="SC5"></td>
+      </tr>
+
+      <tr>
+        <td id="H6"><input type="checkbox"> Agilität (Springen Klettern und Co.) <input type="number" id="HC6"></td>
+        <td id="W6"><input type="checkbox"> Geographie <input type="number" id="WC6"></td>
+        <td id="S6"><input type="checkbox"> Betören <input type="number" id="SC6"></td>
+      </tr>
+
+      <tr>
+        <td id="H7"><input type="checkbox"> Schlossknacken <input type="number" id="HC7"></td>
+        <td id="W7"><input type="checkbox"> Medizin <input type="number" id="WC7"></td>
+        <td id="S7"><input type="checkbox"> Beruhigen <input type="number" id="SC7"></td>
+      </tr>
+
+      <tr>
+        <td id="H8"><input type="checkbox"> Taschendiebstahl <input type="number" id="HC8"></td>
+        <td id="W8"><input type="checkbox"> Kochen <input type="number" id="WC8"></td>
+        <td id="S8"><input type="checkbox"> Redegewandtheit <input type="number" id="SC8"></td>
+      </tr>
+
+      <tr>
+        <td id="H9"><input type="checkbox"> Verstecken <input type="number" id="HC9"></td>
+        <td id="W9"><input type="checkbox"> Alchemie <input type="number" id="WC9"></td>
+        <td id="S9"><input type="checkbox"> Humor <input type="number" id="SC9"></td>
+      </tr>
+
+        <tr>
+        <td id="H10"><input type="checkbox"> Schleichen <input type="number" id="HC10"></td>
+        <td id="W10"><input type="checkbox"> Fremdsprachen <input type="number" id="WC10"></td>
+        <td id="S10"><input type="checkbox"> Zechen <input type="number" id="SC10"></td>
+      </tr>
+
+      <tr>
+        <td id="H11"><input type="checkbox"> Erste Hilfe (Benötigt Mats) <input type="number" id="HC11"></td>
+        <td id="W11"><input type="checkbox"> Gesellschaft / Allgemeinwissen <input type="number" id="WC11"></td>
+        <td id="S11"><input type="checkbox"> Begeistern <input type="number" id="SC11"></td>
+      </tr>
+
+      <tr>
+        <td id="H12"><input type="checkbox"> Angeln <input type="number" id="HC12"></td>
+        <td id="W12"><input type="checkbox"> Lesen / Schreiben <input type="number" id="WC12"></td>
+        <td id="S12"><input type="checkbox"> Ablenken <input type="number" id="SC12"></td>
+      </tr>
+
+      <tr>
+        <td id="H13"><input type="checkbox"> Tanzen <input type="number" id="HC13"></td>
+        <td id="W13"><input type="checkbox"> Wahrnehmung <input type="number" id="WC13"></td>
+        <td id="S13"><input type="checkbox"> Manipulation <input type="number" id="SC13"></td>
+      </tr>
+
+      <tr>
+        <td id="H14"><input type="checkbox"> Reiten <input type="number" id="HC14"></td>
+      </tr>
+
+      <tr>
+        <td id="H15"><input type="checkbox"> Kraft <input type="number" id="HC15"></td>
+      </tr>
+
+      </table>
+      <br>
+      <button>Generate NPC</button>
+    </div>
+    <script type="text/javascript">
+      function get_total_divider(){
+
+      }
+    </script>
+    <script type="text/javascript">
+      function set_value(item,val){
+        document.getElementById(String(item)).value = val;
+      };
+
+      function change_value(total_checked){
+        if (total_checked == 0) {
+          for (i=1; i<16; i++){
+            val = Math.floor (document.getElementById("selectNumber").value/41);
+            console.log(val)
+            item = "HC"+i;
+            console.log(item)
+            set_value(item,val);
+            if (i<14){
+              item = "WC"+i;  
+              set_value(item,val);
+              item = "SC"+i;
+              set_value(item,val);
+            }
+            else{
+              console.log("WC"+i);
+              console.log("SC"+i);
+            }}
+            //            document.getElementById("HC"+i).value = Math.floor (document.getElementById("selectNumber").value/41);
+//            document.getElementById("WC"+i).value = Math.floor (document.getElementById("selectNumber").value/41);
+            //            if (i<14){
+//              document.getElementById("WC"+i).value = Math.floor (document.getElementById("selectNumber").value/41);
+//              document.getElementById("SC"+i).value = Math.floor (document.getElementById("selectNumber").value/41);
+//            }
+        }
+        else {
+          document.getElementById("target").value = Math.floor (document.getElementById("selectNumber").value/total_checked);
+        }
+      }
+
+      </script>
+    <script type="text/javascript">
+
+      var select = document.getElementById("selectNumber");
+      var options = ["50", "100", "150", "200", "250", "300", "400", "500", "600"];
+      for(var i = 0; i < options.length; i++) {
+          var opt = options[i];
+          var el = document.createElement("option");
+          el.textContent = opt;
+          el.value = opt;
+          select.appendChild(el);
+      }
+
+      </script>
+  </body>
+</html>
